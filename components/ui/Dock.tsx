@@ -64,14 +64,20 @@ export function DockIcon({
 
     const width = useSpring(widthSync, {
         mass: 0.1,
-        stiffness: 200,
-        damping: 15,
+        stiffness: 150, // Reduced from 200 for smoother animation
+        damping: 12, // Adjusted for better smoothness
+        restDelta: 0.001, // Helps animations settle faster
     });
 
     return (
         <motion.div
             ref={ref}
-            style={{ width }}
+            style={{
+                width,
+                // GPU acceleration hints
+                transform: "translate3d(0, 0, 0)",
+                willChange: "width",
+            }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             className={cn(
@@ -82,9 +88,17 @@ export function DockIcon({
             {children}
             {title && isHovered && (
                 <motion.div
-                    initial={{ opacity: 0, y: 10, scale: 0.6 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 10, scale: 0.6 }}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{
+                        duration: 0.15,
+                        ease: [0.22, 1, 0.36, 1],
+                    }}
+                    style={{
+                        transform: "translate3d(0, 0, 0)",
+                        willChange: "transform, opacity",
+                    }}
                     className="absolute -top-12 left-1/2 -translate-x-1/2 px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs rounded-md whitespace-nowrap pointer-events-none"
                 >
                     {title}

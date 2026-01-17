@@ -11,6 +11,9 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 export const metadata: Metadata = {
   title: "Portfolio",
   description: "Personal Portfolio",
+  icons: {
+    icon: "http://media.licdn.com/dms/image/v2/D5603AQESt-giQjdFLw/profile-displayphoto-scale_400_400/B56ZnXTiFOI4Ag-/0/1760253847742?e=1770249600&v=beta&t=eti-5kzvfUhqkICyspFaEs0VPMUY0kG1yJ-O8pLbews",
+  },
 };
 
 export default function RootLayout({
@@ -23,7 +26,7 @@ export default function RootLayout({
       <body className={cn("min-h-screen bg-background font-sans antialiased", inter.variable)}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           disableTransitionOnChange
         >
           <div className="relative flex min-h-screen flex-col">

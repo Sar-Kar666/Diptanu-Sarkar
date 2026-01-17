@@ -6,7 +6,7 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import { Github, Linkedin, Mail, Globe } from "lucide-react";
 
-const BLUR_FADE_DELAY = 0.04;
+const BLUR_FADE_DELAY = 0.02; // Reduced from 0.04 to spread animations more efficiently
 
 export default function Page() {
   return (
@@ -15,21 +15,21 @@ export default function Page() {
       {/* Hero Section */}
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
-          <div className="gap-2 flex justify-between">
+          <div className="gap-4 flex justify-between">
             <div className="flex-col flex flex-1 space-y-1.5">
               <BlurFade delay={BLUR_FADE_DELAY} yOffset={8}>
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  Hi, I'm Diptanu 
+                <h1 className="text-3xl font-bold sm:text-5xl xl:text-6xl/none">
+                  Hi, I'm Diptanu
                 </h1>
               </BlurFade>
               <BlurFade delay={BLUR_FADE_DELAY * 2} yOffset={8}>
                 <p className="max-w-[600px] md:text-xl text-muted-foreground">
-                  I love building things. I am a software engineer passionate about AI, ML, and extensive web development.
+                 I turn ideas into functional web products by leveraging MERN stack and Next.js to deliver modern, high-performance web experiences.
                 </p>
               </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY} yOffset={8}>
-              <div className="rounded-full border overflow-hidden w-28 h-28 bg-gray-100 dark:bg-zinc-800">
+              <div className="rounded-full border overflow-hidden w-28 h-28 flex-shrink-0 bg-gray-100 dark:bg-zinc-800">
                 {/* Placeholder for Profile Image */}
                 <img src="http://media.licdn.com/dms/image/v2/D5603AQESt-giQjdFLw/profile-displayphoto-scale_400_400/B56ZnXTiFOI4Ag-/0/1760253847742?e=1770249600&v=beta&t=eti-5kzvfUhqkICyspFaEs0VPMUY0kG1yJ-O8pLbews" alt="Profile" className="object-cover w-full h-full" />
               </div>
@@ -38,6 +38,7 @@ export default function Page() {
         </div>
       </section>
 
+
       {/* About Section */}
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
@@ -45,9 +46,7 @@ export default function Page() {
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <p className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            I am currently a student exploring the depths of artificial intelligence and machine learning.
-            I enjoy creating efficient and scalable web applications. My journey involves rigorous hacking
-            in hackathons and building open-source projects.
+            I’m a passionate full-stack developer with hands-on experience in building scalable web applications using modern technologies like Node.js, TypeScript, PostgreSQL, and React. I enjoy solving real-world problems through clean, efficient code and continuously learning new tools.
           </p>
         </BlurFade>
       </section>
@@ -61,19 +60,19 @@ export default function Page() {
           {[
             {
               title: "Software Engineer Intern",
-              company: "Tech Corp",
-              dates: "2024 - Present",
-              location: "Remote",
-              description: "Implemented new features for the user dashboard and optimized database queries.",
-              image: "",
+              company: "iLogitron Private Limited",
+              dates: "Oct 2025 - Jan 2026",
+              location: "WFH",
+              description: "Made the landing page of iLogitron Private Limited",
+              image: "https://ilogitron.com/assets2/images/favicon1.png",
             },
             {
-              title: "Frontend Developer",
-              company: "Startup Inc",
-              dates: "2023 - 2024",
-              location: "San Francisco, CA",
-              description: "Built the landing page using Next.js and Tailwind CSS, increasing conversion by 20%.",
-              image: "",
+              title: "Frontend Developer Intern",
+              company: "TalkEngGlobal",
+              dates: "Jun 2025 - Jul 2025",
+              location: "WFH",
+              description: "Made a full-stack couse-selling-website usig React,Tailwind css, Mongo DB and Node.js",
+              image: "https://talkengglobal.com/favicon.ico",
             }
           ].map((work, id) => (
             <BlurFade key={work.company} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
@@ -98,12 +97,12 @@ export default function Page() {
           </BlurFade>
           {[
             {
-              school: "University of Technology",
+              school: "Tripura Institute of Technology",
               degree: "B.Tech in Computer Science",
-              dates: "2021 - 2025",
-              location: "City, Country",
+              dates: "Aug 2023 - Aug 2026",
+              location: "Tripura, India",
               description: "Focused on Algorithms, Data Structures, and AI.",
-              image: "",
+              image: "https://titagartala.ac.in/wp-content/uploads/2023/05/cropped-logo-1.png",
             },
           ].map((edu, id) => (
             <BlurFade key={edu.school} delay={BLUR_FADE_DELAY * 8 + id * 0.05}>
@@ -128,8 +127,8 @@ export default function Page() {
           </BlurFade>
           <div className="flex flex-wrap gap-1">
             {[
-              "Python", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS",
-              "Node.js", "PostgreSQL", "Docker", "Git", "Framer Motion", "Java"
+              "Next.js", "JavaScript", "TypeScript", "React", "Tailwind CSS", "MongoDB", "Node.js",
+              "PostgreSQL", "Git",
             ].map((skill, id) => (
               <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
                 <Badge key={skill}>{skill}</Badge>
@@ -160,28 +159,28 @@ export default function Page() {
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
             {[
               {
-                title: "Portfolio Website",
+                title: "Official Website",
                 href: "https://example.com",
-                dates: "Jan 2024 - Feb 2024",
+                dates: "Oct 2025 - Jan 2026",
                 active: true,
                 description:
-                  "A minimalist portfolio website built with Next.js and Tailwind CSS.",
+                  "Designed and developed with smooth animations, interactive components, and seamless product integration to deliver a modern, engaging web experience.",
                 technologies: [
-                  "Next.js",
-                  "Typescript",
-                  "PostgreSQL",
-                  "TailwindCSS",
-                  "Framer Motion",
+                  "Html",
+                  "Css",
+                  "JavaScript",
+                  // "TailwindCSS",
+                  // "Framer Motion",
                 ],
                 links: [
                   {
                     type: "Website",
-                    href: "https://example.com",
+                    href: "https://ilogitron.vercel.app/",
                     icon: <Globe className="size-3" />,
                   },
                   {
                     type: "Source",
-                    href: "https://github.com/example/portfolio",
+                    href: "https://github.com/Sar-Kar666/Ilogitron",
                     icon: <Github className="size-3" />,
                   },
                 ],
@@ -189,23 +188,30 @@ export default function Page() {
                 video: "",
               },
               {
-                title: "AI Chatbot",
-                href: "https://example.com",
-                dates: "Nov 2023 - Dec 2023",
+                title: "  ",
+                href: "https://course-selling-website-delta.vercel.app/",
+                dates: "June 2025 - July 2025",
                 active: true,
                 description:
-                  "An AI-powered chatbot application utilizing the latest LLMs for natural conversation.",
+                  "A course selling website, when admin can post a course and users can login and buy the required courses.",
                 technologies: [
-                  "Next.js",
+                  "React",
                   "Typescript",
-                  "OpenAI API",
                   "TailwindCSS",
+                  "express.js",
+                  "Node.js",
+                  "MongoDB",
                 ],
                 links: [
                   {
                     type: "Website",
-                    href: "https://example.com",
+                    href: "https://course-selling-website-delta.vercel.app/",
                     icon: <Globe className="size-3" />,
+                  },
+                  {
+                    type: "Source",
+                    href: "https://github.com/Sar-Kar666/Course-Selling-Website",
+                    icon: <Github className="size-3" />,
                   },
                 ],
                 image: "",
@@ -231,13 +237,13 @@ export default function Page() {
       </section>
 
       {/* Hackathons Section */}
-      <section id="hackathons">
+      {/* <section id="hackathons">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <h2 className="text-xl font-bold">Hackathons</h2>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 14}>
-            <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
+            <ul className="mb-4 ml-16 divide-y divide-dashed border-l">
               {[
                 {
                   title: "HackNITR 4.0",
@@ -254,10 +260,8 @@ export default function Page() {
               ].map((project, id) => (
                 <BlurFade key={project.title + project.dates} delay={BLUR_FADE_DELAY * 15 + id * 0.05}>
                   <li className="relative ml-10 py-4">
-                    <div className="absolute -left-16 top-2 flex items-center justify-center bg-white rounded-full">
-                      <div className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-gray-200 bg-white dark:bg-black dark:border-white/10">
-                        <div className="text-xs font-bold">{project.title[0]}</div>
-                      </div>
+                    <div className="absolute -left-14 top-2 flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white dark:bg-black dark:border-white/10">
+                      <div className="text-xs font-bold">{project.title[0]}</div>
                     </div>
                     <div className="flex flex-1 flex-col justify-start gap-1">
                       {project.dates && (
@@ -279,7 +283,7 @@ export default function Page() {
             </ul>
           </BlurFade>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Section */}
       <section id="contact">
@@ -295,7 +299,7 @@ export default function Page() {
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Want to chat? Just shoot me a dm{" "}
                 <Link
-                  href="https://twitter.com/placeholder"
+                  href="https://twitter.com/https://x.com/Sarkar_2030"
                   className="text-blue-500 hover:underline"
                 >
                   with a direct question on twitter

@@ -37,13 +37,12 @@ export default function BlurFade({
         hidden: {
             y: yOffset,
             opacity: 0,
-            filter: `blur(${blur})`,
+            // Removed expensive filter blur - causes lag in production
             scale: 0.98,
         },
         visible: {
             y: 0,
             opacity: 1,
-            filter: `blur(0px)`,
             scale: 1,
         },
     };
@@ -60,7 +59,12 @@ export default function BlurFade({
             transition={{
                 delay: 0.04 + delay,
                 duration,
-                ease: [0.16, 1, 0.3, 1], // Custom easing for smooth feel
+                ease: [0.22, 1, 0.36, 1], // Optimized easing curve for smoother animations
+            }}
+            style={{
+                // GPU acceleration hints
+                transform: "translate3d(0, 0, 0)",
+                willChange: isInView ? "auto" : "transform, opacity",
             }}
             className={className}
         >

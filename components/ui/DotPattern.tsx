@@ -33,6 +33,10 @@ export function DotPattern({
                 "pointer-events-none absolute inset-0 h-full w-full fill-neutral-400/80",
                 className
             )}
+            style={{
+                // GPU acceleration hint for better performance
+                transform: "translate3d(0, 0, 0)",
+            }}
             {...props}
         >
             <defs>
