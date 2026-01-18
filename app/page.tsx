@@ -45,7 +45,7 @@ export default function Page() {
           <h2 className="text-xl font-bold mb-4">About</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <p className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:text-gray-300 dark:prose-invert">
+          <p className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:text-gray-600 dark:prose-invert">
             I’m a passionate full-stack developer with hands-on experience in building scalable web applications using modern technologies like Node.js, TypeScript, PostgreSQL, and React. I enjoy solving real-world problems through clean, efficient code and continuously learning new tools.
           </p>
         </BlurFade>
