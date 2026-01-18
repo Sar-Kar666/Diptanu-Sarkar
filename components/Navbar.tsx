@@ -9,36 +9,38 @@ import { ThemeToggle } from "./ThemeToggle";
 export default function Navbar() {
     return (
         <div className="fixed bottom-4 left-0 right-0 z-50 flex justify-center">
-            <Dock className="border border-black/10 dark:border-white/10 shadow-lg bg-white/80 dark:bg-black/80 backdrop-blur-md">
+            <Dock className="border border-black/10 dark:border-white/10 shadow-lg bg-white/80 dark:bg-black/90 backdrop-blur-md">
                 <DockIcon title="Home">
-                    <Link href="#hero" aria-label="Home">
+                    <Link href="#hero" aria-label="Home" className="text-black dark:text-white">
                         <Home className="size-5" />
                     </Link>
                 </DockIcon>
                 <DockIcon title="GitHub">
-                    <Link href="https://github.com/Sar-Kar666" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <Link href="https://github.com/Sar-Kar666" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-black dark:text-white">
                         <Github className="size-5" />
                     </Link>
                 </DockIcon>
                 <DockIcon title="LinkedIn">
-                    <Link href="https://www.linkedin.com/in/sarkardiptanu" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <Link href="https://www.linkedin.com/in/sarkardiptanu" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-black dark:text-white">
                         <Linkedin className="size-5" />
                     </Link>
                 </DockIcon>
                 <DockIcon title="X / Twitter">
-                    <Link href="https://x.com/Sarkar_2030" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter">
+                    <Link href="https://x.com/Sarkar_2030" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter" className="text-black dark:text-white">
                         <svg className="size-5" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                         </svg>
                     </Link>
                 </DockIcon>
                 <DockIcon title="Resume">
-                    <Link href="https://drive.google.com/file/d/1RncjMPW6J4B4sxe1uc7Pul7vuzI0yLF0/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Resume">
+                    <Link href="https://drive.google.com/file/d/1RncjMPW6J4B4sxe1uc7Pul7vuzI0yLF0/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Resume" className="text-black dark:text-white">
                         <Calendar className="size-5" />
                     </Link>
                 </DockIcon>
                 <DockIcon title="Toggle Theme">
-                    <ThemeToggle />
+                    <div className="text-black dark:text-white">
+                        <ThemeToggle />
+                    </div>
                 </DockIcon>
             </Dock>
         </div>

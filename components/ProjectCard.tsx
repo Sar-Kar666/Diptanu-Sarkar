@@ -37,8 +37,8 @@ export function ProjectCard({
     return (
         <div
             className={cn(
-                "group flex flex-col overflow-hidden border transition-all duration-300 ease-out h-full bg-white dark:bg-black/40 rounded-xl border-gray-200 dark:border-white/10",
-                "hover:shadow-xl hover:shadow-black/5 dark:hover:shadow-white/5 hover:-translate-y-1 hover:border-gray-300 dark:hover:border-white/20",
+                "group flex flex-col overflow-hidden border transition-all duration-300 ease-out h-full bg-card text-card-foreground dark:bg-black/40 rounded-xl border-border",
+                "hover:shadow-xl hover:shadow-black/5 dark:hover:shadow-white/5 hover:-translate-y-1 hover:border-primary/20",
                 className
             )}
         >
@@ -54,9 +54,9 @@ export function ProjectCard({
                     />
                 )}
                 {image && !video && (
-                    <div className="h-40 w-full overflow-hidden bg-gray-100 dark:bg-neutral-900 border-b border-gray-200 dark:border-white/10">
+                    <div className="h-40 w-full overflow-hidden bg-muted dark:bg-neutral-900 border-b border-border">
                         {/* Placeholder for actual image implementation */}
-                        <div className="w-full h-full flex items-center justify-center text-gray-400 text-sm transition-transform duration-300 group-hover:scale-105">
+                        <div className="w-full h-full flex items-center justify-center text-muted-foreground text-sm transition-transform duration-300 group-hover:scale-105">
                             {image}
                         </div>
                     </div>
@@ -69,7 +69,7 @@ export function ProjectCard({
                     </h3>
                     {dates && <span className="text-xs text-muted-foreground">{dates}</span>}
                 </div>
-                <div className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert text-gray-500 mb-2">
+                <div className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert mb-2">
                     {description}
                 </div>
                 <div className="mt-auto flex flex-col gap-2">

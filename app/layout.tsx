@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Diptanu Sarkar",
   description: "Personal Portfolio",
   icons: {
-    icon: "http://media.licdn.com/dms/image/v2/D5603AQESt-giQjdFLw/profile-displayphoto-scale_400_400/B56ZnXTiFOI4Ag-/0/1760253847742?e=1770249600&v=beta&t=eti-5kzvfUhqkICyspFaEs0VPMUY0kG1yJ-O8pLbews",
+    icon: "/avatar.png",
   },
 };
 

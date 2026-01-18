@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 
 interface Props {
     title: string;
+    subtitle?: string;
     description: string;
     dates: string;
     location: string;
@@ -18,6 +19,7 @@ interface Props {
 
 export const ResumeCard = ({
     title,
+    subtitle,
     description,
     dates,
     location,
@@ -40,12 +42,16 @@ export const ResumeCard = ({
                     <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
                         {title}
                     </h3>
-                    <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right text-gray-500">
+                    <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right text-gray-500 dark:text-gray-400">
                         {dates}
                     </div>
                 </div>
-                <div className="flex items-center justify-between text-xs font-medium text-muted-foreground mb-2 mt-1">
-                    <span className="text-black dark:text-white capitalize">{location}</span>
+                <div className="flex items-center justify-between text-xs font-medium mb-2 mt-1">
+                    <div className="flex items-center gap-1">
+                        {subtitle && <span className="font-semibold text-zinc-600 dark:!text-white">{subtitle}</span>}
+                        {subtitle && location && <span className="text-zinc-600 dark:!text-white">•</span>}
+                        <span className="capitalize text-zinc-600 dark:!text-white">{location}</span>
+                    </div>
                 </div>
                 <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
                     {description}

@@ -24,14 +24,14 @@ export default function Page() {
               </BlurFade>
               <BlurFade delay={BLUR_FADE_DELAY * 2} yOffset={8}>
                 <p className="max-w-[600px] md:text-xl text-muted-foreground">
-                 I turn ideas into functional web products by leveraging MERN stack and Next.js to deliver modern, high-performance web experiences.
+                  I turn ideas into functional web products by leveraging MERN stack and Next.js to deliver modern, high-performance web experiences.
                 </p>
               </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY} yOffset={8}>
               <div className="rounded-full border overflow-hidden w-28 h-28 flex-shrink-0 bg-gray-100 dark:bg-zinc-800">
                 {/* Placeholder for Profile Image */}
-                <img src="http://media.licdn.com/dms/image/v2/D5603AQESt-giQjdFLw/profile-displayphoto-scale_400_400/B56ZnXTiFOI4Ag-/0/1760253847742?e=1770249600&v=beta&t=eti-5kzvfUhqkICyspFaEs0VPMUY0kG1yJ-O8pLbews" alt="Profile" className="object-cover w-full h-full" />
+                <img src="/avatar.png" alt="Profile" className="object-cover w-full h-full" />
               </div>
             </BlurFade>
           </div>
@@ -45,7 +45,7 @@ export default function Page() {
           <h2 className="text-xl font-bold mb-4">About</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <p className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+          <p className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:text-gray-300 dark:prose-invert">
             I’m a passionate full-stack developer with hands-on experience in building scalable web applications using modern technologies like Node.js, TypeScript, PostgreSQL, and React. I enjoy solving real-world problems through clean, efficient code and continuously learning new tools.
           </p>
         </BlurFade>
@@ -62,7 +62,7 @@ export default function Page() {
               title: "Software Engineer Intern",
               company: "iLogitron Private Limited",
               dates: "Oct 2025 - Jan 2026",
-              location: "WFH",
+              location: "WFO",
               description: "Made the landing page of iLogitron Private Limited",
               image: "https://ilogitron.com/assets2/images/favicon1.png",
             },
@@ -70,7 +70,7 @@ export default function Page() {
               title: "Frontend Developer Intern",
               company: "TalkEngGlobal",
               dates: "Jun 2025 - Jul 2025",
-              location: "WFH",
+              location: "WFO",
               description: "Made a full-stack couse-selling-website usig React,Tailwind css, Mongo DB and Node.js",
               image: "https://talkengglobal.com/favicon.ico",
             }
@@ -79,6 +79,7 @@ export default function Page() {
               <ResumeCard
                 key={work.company}
                 title={work.title}
+                subtitle={work.company}
                 description={work.description}
                 dates={work.dates}
                 location={work.location}
@@ -188,7 +189,7 @@ export default function Page() {
                 video: "",
               },
               {
-                title: "  ",
+                title: "Course Selling Website",
                 href: "https://course-selling-website-delta.vercel.app/",
                 dates: "June 2025 - July 2025",
                 active: true,
